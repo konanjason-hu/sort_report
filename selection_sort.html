@@ -193,15 +193,18 @@ def selection_sort(arr):<br>
             for (let i = 0; i < n; i++) {
                 let minIdx = i;
                 highlightItems([i], 'comparing');
+                highlightItems([minIdx], 'min');
+                await sleep(300);
                 
                 for (let j = i + 1; j < n; j++) {
-                    highlightItems([j], 'min');
+                    highlightItems([i, minIdx, j], 'comparing');
                     await sleep(300);
                     
                     if (array[j] < array[minIdx]) {
                         minIdx = j;
+                        highlightItems([i], 'comparing');
+                        highlightItems([minIdx], 'min');
                     }
-                    highlightItems([j], 'normal');
                 }
                 
                 if (minIdx !== i) {
@@ -217,7 +220,8 @@ def selection_sort(arr):<br>
         function highlightItems(indices, type) {
             const items = document.querySelectorAll('.array-item');
             items.forEach((item, idx) => {
-                if (indices.includes(idx)) {
+                let shouldHighlight = indices.includes(idx);
+                if (shouldHighlight) {
                     if (type === 'comparing') {
                         item.className = 'array-item comparing';
                     } else if (type === 'sorted') {
