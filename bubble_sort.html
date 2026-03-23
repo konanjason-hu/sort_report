@@ -126,6 +126,8 @@ def bubble_sort(arr):<br>
 
     <div class="demo">
         <h2>互動演示</h2>
+        <label for="arraySize">元素個數：</label>
+        <input type="number" id="arraySize" min="1" max="20" value="10">
         <div class="legend">
             <div class="legend-item">
                 <div class="legend-color" style="background-color: #007bff;"></div>
@@ -150,7 +152,8 @@ def bubble_sort(arr):<br>
         let isSorting = false;
 
         function generateArray() {
-            array = Array.from({length: 10}, () => Math.floor(Math.random() * 100) + 1);
+            const size = parseInt(document.getElementById('arraySize').value);
+            array = Array.from({length: size}, () => Math.floor(Math.random() * 100) + 1);
             displayArray();
         }
 
