@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -128,166 +128,14 @@
         <h2>Python 程式碼範例</h2>
         <div class="code-block">
 def merge_sort(arr):<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</html></body>    </script>        generateArray();        }            return new Promise(resolve => setTimeout(resolve, ms));        function sleep(ms) {        }            });                item.className = 'array-item sorted';            items.forEach(item => {            const items = document.querySelectorAll('.array-item');        function markSorted() {        }            });                }                    item.className = 'array-item';                } else if (!item.className.includes('sorted')) {                    item.className = 'array-item ' + type;                if (indices.includes(idx)) {            items.forEach((item, idx) => {            const items = document.querySelectorAll('.array-item');        function highlightItems(indices, type) {        }            });                }                    item.className = 'array-item';                } else {                    item.className = 'array-item';                    if (item.className.includes('sorted')) return;                } else if (type === 'sorted') {                    item.className = 'array-item ' + type;                if (idx >= start && idx < end) {            items.forEach((item, idx) => {            const items = document.querySelectorAll('.array-item');        function highlightRange(start, end, type) {        }            await sleep(200);            highlightRange(left, right, 'sorted');            }                await sleep(200);                highlightItems([k], 'merging');                displayArray();                array[k] = temp[k - left];            for (let k = left; k < right; k++) {            }                j += 1;                temp.push(array[j]);            while (j < right) {            }                i += 1;                temp.push(array[i]);            while (i < mid) {            }                }                    j += 1;                    temp.push(array[j]);                } else {                    i += 1;                    temp.push(array[i]);                if (array[i] <= array[j]) {                await sleep(300);                highlightItems([i, j], 'comparing');            while (i < mid && j < right) {            await sleep(400);            highlightRange(mid, right, 'right');            highlightRange(left, mid, 'left');            let j = mid;            let i = left;            const temp = [];        async function merge(left, mid, right) {        }            await merge(left, mid, right);            await mergeSort(mid, right);            await mergeSort(left, mid);            const mid = Math.floor((left + right) / 2);            if (right - left <= 1) return;        async function mergeSort(left, right) {        }            isSorting = false;            markSorted();            await mergeSort(0, array.length);            isSorting = true;            if (isSorting) return;        async function mergeSortDemo() {        }            });                container.appendChild(div);                div.textContent = num;                div.style.height = height + 'px';                const height = (num / maxNum) * 300;                div.className = 'array-item';                const div = document.createElement('div');            array.forEach(num => {            container.innerHTML = '';            const maxNum = Math.max(...array, 100);            const container = document.getElementById('arrayContainer');        function displayArray() {        }            displayArray();            array = Array.from({length: size}, () => Math.floor(Math.random() * 100) + 1);            const size = parseInt(document.getElementById('arraySize').value);        function generateArray() {        let isSorting = false;        let array = [];    <script>    </div>        <div id="arrayContainer"></div>        <button onclick="mergeSortDemo()">開始排序</button>        <button onclick="generateArray()">生成新陣列</button>        <input type="number" id="arraySize" min="1" max="20" value="10">        <label for="arraySize">元素個數：</label>        </div>            </div>                <span>已排序</span>                <div class="legend-color" style="background-color: #51cf66;"></div>            <div class="legend-item">            </div>                <span>合併中</span>                <div class="legend-color" style="background-color: #ffd43b;"></div>            <div class="legend-item">            </div>                <span>右半段</span>                <div class="legend-color" style="background-color: #ffa94d;"></div>            <div class="legend-item">            </div>                <span>左半段</span>                <div class="legend-color" style="background-color: #70b2ff;"></div>            <div class="legend-item">            </div>                <span>正常元素</span>                <div class="legend-color" style="background-color: #007bff;"></div>            <div class="legend-item">        <div class="legend">        <h2>互動演示</h2>    <div class="demo">    </div>        </div>def merge(left, right):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if len(arr) <= 1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return arr<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mid = len(arr) // 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;left = merge_sort(arr[:mid])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;right = merge_sort(arr[mid:])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return merge(left, right)<br>
+<br>
+def merge(left, right):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;result = []<br>
 &nbsp;&nbsp;&nbsp;&nbsp;i = j = 0<br>
 &nbsp;&nbsp;&nbsp;&nbsp;while i < len(left) and j < len(right):<br>
@@ -299,10 +147,161 @@ def merge_sort(arr):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j += 1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;result.extend(left[i:])<br>
 &nbsp;&nbsp;&nbsp;&nbsp;result.extend(right[j:])<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return result&nbsp;&nbsp;&nbsp;&nbsp;if len(arr) <= 1:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return arr<br>
-&nbsp;&nbsp;&nbsp;&nbsp;mid = len(arr) // 2<br>
-&nbsp;&nbsp;&nbsp;&nbsp;left = merge_sort(arr[:mid])<br>
-&nbsp;&nbsp;&nbsp;&nbsp;right = merge_sort(arr[mid:])<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return merge(left, right)<br>
-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return result<br>
+        </div>
+    </div>
+
+    <div class="demo">
+        <h2>互動演示</h2>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #007bff;"></div>
+                <span>正常元素</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #70b2ff;"></div>
+                <span>左半段</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #ffa94d;"></div>
+                <span>右半段</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #ffd43b;"></div>
+                <span>合併中</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #51cf66;"></div>
+                <span>已排序</span>
+            </div>
+        </div>
+        <label for="arraySize">元素個數：</label>
+        <input type="number" id="arraySize" min="1" max="20" value="10">
+        <button onclick="generateArray()">生成新陣列</button>
+        <button onclick="mergeSortDemo()">開始排序</button>
+        <div id="arrayContainer"></div>
+    </div>
+
+    <script>
+        let array = [];
+        let isSorting = false;
+
+        function generateArray() {
+            const size = parseInt(document.getElementById('arraySize').value);
+            array = Array.from({length: size}, () => Math.floor(Math.random() * 100) + 1);
+            displayArray();
+        }
+
+        function displayArray() {
+            const container = document.getElementById('arrayContainer');
+            const maxNum = Math.max(...array, 100);
+            container.innerHTML = '';
+            array.forEach(num => {
+                const div = document.createElement('div');
+                div.className = 'array-item';
+                const height = (num / maxNum) * 300;
+                div.style.height = height + 'px';
+                div.textContent = num;
+                container.appendChild(div);
+            });
+        }
+
+        async function mergeSortDemo() {
+            if (isSorting) return;
+            isSorting = true;
+            await mergeSort(0, array.length);
+            markSorted();
+            isSorting = false;
+        }
+
+        async function mergeSort(left, right) {
+            if (right - left <= 1) return;
+            const mid = Math.floor((left + right) / 2);
+
+            await mergeSort(left, mid);
+            await mergeSort(mid, right);
+            await merge(left, mid, right);
+        }
+
+        async function merge(left, mid, right) {
+            const temp = [];
+            let i = left;
+            let j = mid;
+
+            highlightRange(left, mid, 'left');
+            highlightRange(mid, right, 'right');
+            await sleep(400);
+
+            while (i < mid && j < right) {
+                highlightItems([i, j], 'comparing');
+                await sleep(300);
+
+                if (array[i] <= array[j]) {
+                    temp.push(array[i]);
+                    i += 1;
+                } else {
+                    temp.push(array[j]);
+                    j += 1;
+                }
+            }
+
+            while (i < mid) {
+                temp.push(array[i]);
+                i += 1;
+            }
+
+            while (j < right) {
+                temp.push(array[j]);
+                j += 1;
+            }
+
+            for (let k = left; k < right; k++) {
+                array[k] = temp[k - left];
+                displayArray();
+                highlightItems([k], 'merging');
+                await sleep(200);
+            }
+            highlightRange(left, right, 'sorted');
+            await sleep(200);
+        }
+
+        function highlightRange(start, end, type) {
+            const items = document.querySelectorAll('.array-item');
+            items.forEach((item, idx) => {
+                if (idx >= start && idx < end) {
+                    item.className = 'array-item ' + type;
+                } else if (type === 'sorted') {
+                    if (item.className.includes('sorted')) return;
+                    item.className = 'array-item';
+                } else {
+                    item.className = 'array-item';
+                }
+            });
+        }
+
+        function highlightItems(indices, type) {
+            const items = document.querySelectorAll('.array-item');
+            items.forEach((item, idx) => {
+                if (indices.includes(idx)) {
+                    item.className = 'array-item ' + type;
+                } else if (!item.className.includes('sorted')) {
+                    item.className = 'array-item';
+                }
+            });
+        }
+
+        function markSorted() {
+            const items = document.querySelectorAll('.array-item');
+            items.forEach(item => {
+                item.className = 'array-item sorted';
+            });
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        generateArray();
+    </script>
+</body>
+</html>
