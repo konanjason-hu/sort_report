@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合併排序法</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .description {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .code-block {
+            background-color: #f8f8f8;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        .demo {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px 10px 0;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #arrayContainer {
+            display: flex;
+            gap: 5px;
+            margin: 20px 0;
+            justify-content: center;
+            align-items: flex-end;
+            height: 320px;
+            flex-wrap: wrap;
+        }
+        .array-item {
+            width: 30px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-color: #007bff;
+            color: white;
+            border-radius: 3px 3px 0 0;
+            font-size: 12px;
+            padding-top: 5px;
+            box-sizing: border-box;
+        }
+        .array-item.left {
+            background-color: #70b2ff;
+        }
+        .array-item.right {
+            background-color: #ffa94d;
+        }
+        .array-item.merging {
+            background-color: #ffd43b;
+        }
+        .array-item.sorted {
+            background-color: #51cf66;
+        }
+        .array-item.comparing {
+            background-color: #ff6b6b;
+        }
+        input {
+            padding: 8px;
+            margin: 10px 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>合併排序法 (Merge Sort)</h1>
+    
+    <div class="description">
+        <h2>說明</h2>
+        <p>合併排序法是一種分治排序演算法。它先將陣列不斷拆分成子陣列，然後再將已排序的子陣列合併起來，最後得到完整排序陣列。</p>
+        
+        <h3>演算法特性：</h3>
+        <ul>
+            <li>時間複雜度：O(n log n)</li>
+            <li>空間複雜度：O(n)</li>
+            <li>類型：穩定排序</li>
+        </ul>
+    </div>
+
+    <div class="description">
+        <h2>Python 程式碼範例</h2>
+        <div class="code-block">
+def merge_sort(arr):<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></body>    </script>        generateArray();        }            return new Promise(resolve => setTimeout(resolve, ms));        function sleep(ms) {        }            });                item.className = 'array-item sorted';            items.forEach(item => {            const items = document.querySelectorAll('.array-item');        function markSorted() {        }            });                }                    item.className = 'array-item';                } else if (!item.className.includes('sorted')) {                    item.className = 'array-item ' + type;                if (indices.includes(idx)) {            items.forEach((item, idx) => {            const items = document.querySelectorAll('.array-item');        function highlightItems(indices, type) {        }            });                }                    item.className = 'array-item';                } else {                    item.className = 'array-item';                    if (item.className.includes('sorted')) return;                } else if (type === 'sorted') {                    item.className = 'array-item ' + type;                if (idx >= start && idx < end) {            items.forEach((item, idx) => {            const items = document.querySelectorAll('.array-item');        function highlightRange(start, end, type) {        }            await sleep(200);            highlightRange(left, right, 'sorted');            }                await sleep(200);                highlightItems([k], 'merging');                displayArray();                array[k] = temp[k - left];            for (let k = left; k < right; k++) {            }                j += 1;                temp.push(array[j]);            while (j < right) {            }                i += 1;                temp.push(array[i]);            while (i < mid) {            }                }                    j += 1;                    temp.push(array[j]);                } else {                    i += 1;                    temp.push(array[i]);                if (array[i] <= array[j]) {                await sleep(300);                highlightItems([i, j], 'comparing');            while (i < mid && j < right) {            await sleep(400);            highlightRange(mid, right, 'right');            highlightRange(left, mid, 'left');            let j = mid;            let i = left;            const temp = [];        async function merge(left, mid, right) {        }            await merge(left, mid, right);            await mergeSort(mid, right);            await mergeSort(left, mid);            const mid = Math.floor((left + right) / 2);            if (right - left <= 1) return;        async function mergeSort(left, right) {        }            isSorting = false;            markSorted();            await mergeSort(0, array.length);            isSorting = true;            if (isSorting) return;        async function mergeSortDemo() {        }            });                container.appendChild(div);                div.textContent = num;                div.style.height = height + 'px';                const height = (num / maxNum) * 300;                div.className = 'array-item';                const div = document.createElement('div');            array.forEach(num => {            container.innerHTML = '';            const maxNum = Math.max(...array, 100);            const container = document.getElementById('arrayContainer');        function displayArray() {        }            displayArray();            array = Array.from({length: size}, () => Math.floor(Math.random() * 100) + 1);            const size = parseInt(document.getElementById('arraySize').value);        function generateArray() {        let isSorting = false;        let array = [];    <script>    </div>        <div id="arrayContainer"></div>        <button onclick="mergeSortDemo()">開始排序</button>        <button onclick="generateArray()">生成新陣列</button>        <input type="number" id="arraySize" min="1" max="20" value="10">        <label for="arraySize">元素個數：</label>        </div>            </div>                <span>已排序</span>                <div class="legend-color" style="background-color: #51cf66;"></div>            <div class="legend-item">            </div>                <span>合併中</span>                <div class="legend-color" style="background-color: #ffd43b;"></div>            <div class="legend-item">            </div>                <span>右半段</span>                <div class="legend-color" style="background-color: #ffa94d;"></div>            <div class="legend-item">            </div>                <span>左半段</span>                <div class="legend-color" style="background-color: #70b2ff;"></div>            <div class="legend-item">            </div>                <span>正常元素</span>                <div class="legend-color" style="background-color: #007bff;"></div>            <div class="legend-item">        <div class="legend">        <h2>互動演示</h2>    <div class="demo">    </div>        </div>def merge(left, right):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result = []<br>
+&nbsp;&nbsp;&nbsp;&nbsp;i = j = 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while i < len(left) and j < len(right):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if left[i] <= right[j]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result.append(left[i])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i += 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result.append(right[j])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j += 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result.extend(left[i:])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result.extend(right[j:])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return result&nbsp;&nbsp;&nbsp;&nbsp;if len(arr) <= 1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return arr<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mid = len(arr) // 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;left = merge_sort(arr[:mid])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;right = merge_sort(arr[mid:])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return merge(left, right)<br>
+<br>
