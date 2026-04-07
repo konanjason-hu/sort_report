@@ -4,7 +4,7 @@
 
 姓名：胡傑荃
 
-模擬頁面：[file:///D:/universirty/1down/11428143/sort_report/index.html](file:///D:/universirty/1down/11428143/sort_report/index.html)
+模擬頁面：[https://konanjason-hu.github.io/sort_report/)](https://konanjason-hu.github.io/sort_report/)
 
 ## 1. 前言
 本報告旨在探討與分析五種常見的排序演算法。透過探討各演算法的運作原理、時間與空間複雜度，並結合實際的程式碼碼模擬不同資料規模 ($n$) 下的執行時間，藉此驗證理論與實際效能之間的差異，並總結出各排序法適合的應用場景。
